@@ -1,3 +1,6 @@
+<script>
+import BaseButton from './components/Base/BaseButton.vue';
+</script>
 <template>
-  <h1>test</h1>
+  <BaseButton label="test" />
 </template>
