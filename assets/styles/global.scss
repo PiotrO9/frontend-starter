@@ -1,3 +1,14 @@
+// Abstracts
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/breakpoints';
+
+// Base
+@import './base/base';
+@import './base/fonts';
+@import './base/reset';
+
 h1 {
     color: red;
+    font-family: var(--main-font);
 }
