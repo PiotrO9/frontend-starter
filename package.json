@@ -12,7 +12,6 @@
         "build-storybook": "storybook build"
     },
     "dependencies": {
-        "@vitejs/plugin-vue": "^5.0.4",
         "npm": "^10.6.0",
         "nuxt": "^3.11.2",
         "sass": "^1.75.0",
@@ -28,9 +27,11 @@
         "@storybook/addon-interactions": "^8.0.9",
         "@storybook/addon-links": "^8.0.9",
         "@storybook/blocks": "^8.0.9",
+        "@storybook/builder-vite": "^8.0.9",
         "@storybook/test": "^8.0.9",
         "@storybook/vue3": "^8.0.9",
         "@storybook/vue3-vite": "^8.0.9",
+        "@vitejs/plugin-vue": "^5.0.4",
         "eslint": "^8.57.0",
         "eslint-config-standard-with-typescript": "^43.0.1",
         "eslint-plugin-import": "^2.29.1",

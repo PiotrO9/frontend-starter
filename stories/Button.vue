@@ -1,4 +1,5 @@
 <template>
   <button>
     test
-  </button></template>
+  </button>
+</template>
