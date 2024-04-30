@@ -1,4 +1,5 @@
-import capitalizeFirstLetter from '../assets/helpers/string-manipulation/capitalizeFirstLetter'
+import { expect } from 'vitest'
+import capitalizeFirstLetter from '../../assets/helpers/string-manipulation/capitalizeFirstLetter'
 
 describe('helpers function tests', () => {
 	test('Capitalize first letter test', () => {
