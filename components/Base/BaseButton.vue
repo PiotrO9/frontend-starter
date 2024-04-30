@@ -30,6 +30,7 @@ const props = withDefaults(defineProps<baseButtonPropsModel>(), { isLoading: fal
 .button {
     font-family: var(--main-font);
     border-radius: var(--default-border-radius);
+    border: 2px solid var(--const-black);
     width: max-content;
     height: max-content;
     word-break: break-word;
