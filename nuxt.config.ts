@@ -5,4 +5,5 @@ export default defineNuxtConfig({
 	typescript: {
 		typeCheck: true,
 	},
+	plugins: ['~/plugins/pinia.js'],
 })
