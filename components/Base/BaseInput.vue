@@ -3,42 +3,43 @@ import type baseInputPropsModel from '../../types/prop-models/base/baseInputProp
 
 const props = defineProps<baseInputPropsModel>();
 
-console.log("props");
-console.log(props);
-
 </script>
 <template>
     <div class="input-wrapper">
         <label :for="props.name" class="label">
             {{ props.label }}
         </label>
-        <input :type="props.type" class="input" :name="props.name">
+        <input :type="props.type" class="input" :name="props.name" :style="{ borderColor: props.borderColor }">
     </div>
 </template>
 
 <style scoped lang="scss">
 .input-wrapper {
-    display: flex;
-    flex-direction: column;
     max-width: 320px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
 
     .label {
         position: absolute;
-        bottom: 10px;
+        bottom: 13px;
+        left: 15px;
+        transition: transform 0.3s;
+        background-color: var(--const-white);
+        padding: 2px 5px;
+
+        &:has(+ input:focus) {
+            transform: translateY(-20px);
+        }
     }
 
     .input {
-        border: 2px solid var(--const-green);
-        color: var(--const-green);
-        margin-top: 20px;
         height: 45px;
-        border-radius: var(--default-border-radius);
-
+        margin-top: 20px;
         padding: 10px;
-
-        &::placeholder {}
+        border: 2px solid var(--const-primary);
+        border-radius: var(--default-border-radius);
     }
 }
 </style>
