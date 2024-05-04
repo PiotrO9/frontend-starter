@@ -1,6 +1,6 @@
 <script>
-import BaseInput from './components/Base/BaseInput.vue';
+import BaseSearchInput from './components/Base/BaseSearchInput.vue';
 </script>
 <template>
-  <BaseInput label="test" type="text" name="name" />
+  <BaseSearchInput />
 </template>
