@@ -17,14 +17,3 @@ Before you begin, ensure you have installed the following:
 
 -   [Node.js](https://nodejs.org/) (version 18.x or later)
 -   [npm](https://www.npmjs.com/) (version 9.x or later)
-
-## Getting Started
-
-To get started with this project, follow these steps:
-
-1. **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/your-username/your-project-name.git
-    cd your-project-name
-    ```
