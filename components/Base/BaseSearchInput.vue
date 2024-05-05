@@ -1,6 +1,7 @@
 <template>
     <div class="search-input">
-        <input type="text" :value="searchTerm" @input="updateSearchTerm" placeholder="Search..." class="search-box" />
+        <input type="text" :value="searchTerm" @input="updateSearchTerm" :placeholder="props.placeholder"
+            class="search-box" />
         <ul v-if="searchTerm && filteredItems.length" class="results">
             <li v-for="(item, index) in filteredItems" :key="index" class="item">
                 {{ item }}
