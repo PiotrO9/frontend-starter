@@ -1,11 +1,7 @@
-// Abstracts
-@import './abstracts/variables';
-@import './abstracts/mixins';
+@import './abstracts/variables.css';
 
-// Base
 @import './base/reset';
 @import './base/fonts';
 @import './base/base';
 
-//Elements
 @import './elements/button';
