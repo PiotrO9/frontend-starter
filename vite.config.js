@@ -1,14 +1,14 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-	plugins: [vue()],
-	css: {
-		preprocessorOptions: {
-			scss: {
-				additionalData:
-					'@import "../frontend-starter/assets/styles/global.css";',
-			},
-		},
-	},
-})
+    plugins: [vue()],
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData:
+					'@import "../frontend-starter/assets/styles/global.css";'
+            }
+        }
+    }
+});

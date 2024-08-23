@@ -1,24 +1,26 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import type baseButtonPropsModel from '../../types/prop-models/base/baseButtonPropsModel';
 import { baseButtonTypes } from '../../types/prop-models/enums/base-button-types';
 import { controlSizes } from '../../types/prop-models/enums/control-sizes';
-import { computed } from 'vue';
 
 const styles = computed(() => {
-    let classNames: string[] = [];
+    const classNames: string[] = [];
+
     if (props.buttonType != baseButtonTypes.other) {
         classNames.push(props.buttonType);
     }
 
     if (props.size) {
-        classNames.push(props.size)
+        classNames.push(props.size);
     }
 
-    return classNames.join(" ");
-})
+    return classNames.join(' ');
+});
 
 const props = withDefaults(defineProps<baseButtonPropsModel>(), { isLoading: false, isDisable: false, size: controlSizes.small });
 </script>
+
 <template>
     <button class="button" :class="styles">
         <span class="text">
@@ -26,6 +28,7 @@ const props = withDefaults(defineProps<baseButtonPropsModel>(), { isLoading: fal
         </span>
     </button>
 </template>
+
 <style scoped lang="scss">
 .button {
     font-family: var(--main-font);

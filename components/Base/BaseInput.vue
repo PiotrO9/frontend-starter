@@ -2,8 +2,8 @@
 import type baseInputPropsModel from '../../types/prop-models/base/baseInputPropsModel';
 
 const props = defineProps<baseInputPropsModel>();
-
 </script>
+
 <template>
     <div class="input-wrapper">
         <label :for="props.name" class="label">

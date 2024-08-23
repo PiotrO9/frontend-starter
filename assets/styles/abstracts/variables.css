@@ -1,17 +1,21 @@
 :root {
-    --main-font: 'Roboto', sans-serif;
-    --second-font: 'Merriweather', sans-serif;
+	/* stylelint-disable custom-property-empty-line-before */
 
-    --const-white: #fff;
-    --const-black: #000;
-    --const-primary: #6bcdfd;
-    --const-secondary: #f0f0f0;
-    --const-gray-1: #a3a3a3;
-    --const-green: #6dfd9c;
+	--main-font: 'Roboto', sans-serif;
+	--second-font: 'Merriweather', sans-serif;
 
-    --default-border-radius: 12px;
+	--const-white: #fff;
+	--const-black: #000;
+	--const-primary: #6bcdfd;
+	--const-secondary: #f0f0f0;
+	--const-gray-1: #a3a3a3;
+	--const-green: #6dfd9c;
 
-    --border-color: var(--const-gray-1);
-    --shadow-1: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    --shadow-2: 2px 2px 8px rgba(0, 0, 0, 0.15);
+	--default-border-radius: 12px;
+
+	--border-color: var(--const-gray-1);
+	--shadow-1: 1px 1px 5px rgba(0 0 0 0.1);
+	--shadow-2: 2px 2px 8px rgba(0 0 0 0.15);
+
+	/* stylelint-enable custom-property-empty-line-before */
 }

@@ -1,13 +1,20 @@
 <template>
     <div class="search-input">
-        <input type="text" :value="searchTerm" @input="updateSearchTerm" :placeholder="props.placeholder"
-            class="search-box" />
+        <input
+            type="text"
+            :value="searchTerm"
+            :placeholder="props.placeholder"
+            class="search-box"
+            @input="updateSearchTerm"
+        >
         <ul v-if="searchTerm && filteredItems.length" class="results">
             <li v-for="(item, index) in filteredItems" :key="index" class="item">
                 {{ item }}
             </li>
         </ul>
-        <p v-if="searchTerm && !filteredItems.length" class="no-results">No items found.</p>
+        <p v-if="searchTerm && !filteredItems.length" class="no-results">
+            No items found.
+        </p>
     </div>
 </template>
 
@@ -29,6 +36,7 @@ const filteredItems = computed(() => {
 
 function updateSearchTerm(event: Event) {
     const target = event.target as HTMLInputElement;
+
     searchTerm.value = target.value;
 }
 </script>

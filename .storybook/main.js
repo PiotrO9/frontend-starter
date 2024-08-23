@@ -2,34 +2,35 @@
 const config = {
     stories: [
         '../stories/**/*.mdx',
-        '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+        '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'
     ],
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@chromatic-com/storybook',
         '@storybook/addon-interactions',
-        '@storybook/preset-scss',
+        '@storybook/preset-scss'
     ],
     framework: {
         name: '@storybook/vue3-vite',
-        options: {},
+        options: {}
     },
     async viteFinal(config, { configType }) {
-        const { mergeConfig } = require('vite')
+        const { mergeConfig } = require('vite');
 
         return mergeConfig(config, {
             css: {
                 preprocessorOptions: {
                     scss: {
-                        additionalData: ``,
-                    },
-                },
-            },
-        })
+                        additionalData: ``
+                    }
+                }
+            }
+        });
     },
     docs: {
-        autodocs: 'tag',
-    },
-}
-export default config
+        autodocs: 'tag'
+    }
+};
+
+export default config;
