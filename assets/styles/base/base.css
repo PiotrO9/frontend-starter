@@ -1,4 +1,29 @@
-h1 {
-    color: red;
-    font-family: var(--main-font);
+/* stylelint-disable selector-id-pattern */
+
+html,
+body,
+#__nuxt {
+	width: 100%;
+	min-height: 100dvh;
+}
+
+a {
+	color: var(--link-color);
+	cursor: pointer;
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: var(--link-hover-color);
+	}
+
+	&:visited {
+		color: var(--link-color);
+	}
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }

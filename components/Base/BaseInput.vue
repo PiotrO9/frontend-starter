@@ -1,5 +1,36 @@
 <script setup lang="ts">
-import type baseInputPropsModel from '../../types/prop-models/base/baseInputPropsModel';
+
+interface baseInputPropsModel {
+    label: string
+    type: InputType
+    name?: string
+    borderColor?: string
+}
+
+type InputType =
+    | 'button'
+    | 'checkbox'
+    | 'color'
+    | 'date'
+    | 'datetime-local'
+    | 'email'
+    | 'file'
+    | 'hidden'
+    | 'image'
+    | 'month'
+    | 'number'
+    | 'password'
+    | 'radio'
+    | 'range'
+    | 'reset'
+    | 'search'
+    | 'submit'
+    | 'tel'
+    | 'text'
+    | 'time'
+    | 'url'
+    | 'week'
+
 
 const props = defineProps<baseInputPropsModel>();
 </script>
@@ -13,7 +44,7 @@ const props = defineProps<baseInputPropsModel>();
     </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .input-wrapper {
     max-width: 320px;
     width: 100%;

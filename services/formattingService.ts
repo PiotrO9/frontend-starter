@@ -60,6 +60,36 @@ class FormattingService {
 	): string {
 		return value ? trueString : falseString
 	}
+
+	reverseString(text: string): string {
+		return text.split('').reverse().join('')
+	}
+
+	toCamelCase(text: string): string {
+		return text
+			.toLowerCase()
+			.replace(/[-_]+/g, ' ')
+			.replace(/(?:^\w|[A-Z]|\b\w)/g, (letter, index) =>
+				index == 0 ? letter.toLowerCase() : letter.toUpperCase(),
+			)
+			.replace(/\s+/g, '')
+	}
+
+	toKebabCase(text: string): string {
+		return text
+			.toLowerCase()
+			.replace(/\s+/g, '-')
+			.replace(/[^\w-]+/g, '')
+	}
+
+	toSlug(text: string): string {
+		return text
+			.toLowerCase()
+			.replace(/\s+/g, '-')
+			.replace(/[^a-z0-9-]/g, '')
+			.replace(/-+/g, '-')
+			.trim()
+	}
 }
 
 export const formattingService = new FormattingService()

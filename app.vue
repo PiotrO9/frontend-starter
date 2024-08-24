@@ -1,7 +1,9 @@
-<script>
-import BaseSearchInput from './components/Base/BaseSearchInput.vue';
+<script setup lang="ts">
+const defaultLayoutName = 'default';
 </script>
 
 <template>
-    <BaseSearchInput />
+    <NuxtLayout :name="defaultLayoutName">
+        <NuxtPage />
+    </NuxtLayout>
 </template>

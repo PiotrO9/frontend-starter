@@ -1,12 +1,7 @@
 <template>
     <div class="search-input">
-        <input
-            type="text"
-            :value="searchTerm"
-            :placeholder="props.placeholder"
-            class="search-box"
-            @input="updateSearchTerm"
-        >
+        <input type="text" :value="searchTerm" :placeholder="props.placeholder" class="search-box"
+            @input="updateSearchTerm">
         <ul v-if="searchTerm && filteredItems.length" class="results">
             <li v-for="(item, index) in filteredItems" :key="index" class="item">
                 {{ item }}
@@ -19,10 +14,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, defineProps } from 'vue';
-import type BaseSearchInputPropsModel from '../../types/prop-models/base/baseSearchInputPropsMode';
+interface BaseSearchInputPropsMode {
+    placeholder: string;
+    name?: string;
+}
 
-const props = defineProps<BaseSearchInputPropsModel>();
+const props = defineProps<BaseSearchInputPropsMode>();
 
 const items = ref<string[]>(['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape']);
 
@@ -41,7 +38,7 @@ function updateSearchTerm(event: Event) {
 }
 </script>
 
-<style lang="scss">
+<style scoped>
 .search-input {
     max-width: 320px;
     width: 100%;

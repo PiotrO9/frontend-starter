@@ -11,11 +11,16 @@
 	--const-gray-1: #a3a3a3;
 	--const-green: #6dfd9c;
 
-	--default-border-radius: 12px;
+	--const-alert-color: #d21b1b;
 
 	--border-color: var(--const-gray-1);
+	--link-color: var(--const-primary);
+	--link-hover-color: #1261eb;
+
 	--shadow-1: 1px 1px 5px rgba(0 0 0 0.1);
 	--shadow-2: 2px 2px 8px rgba(0 0 0 0.15);
+
+	--default-border-radius: 12px;
 
 	/* stylelint-enable custom-property-empty-line-before */
 }

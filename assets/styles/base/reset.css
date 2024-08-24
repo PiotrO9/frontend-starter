@@ -82,7 +82,7 @@ video {
 	padding: 0;
 	border: 0;
 	font-size: inherit;
-	font: inherit;
+	font-family: inherit;
 	vertical-align: baseline;
 }
 
@@ -131,6 +131,7 @@ img,
 video {
 	max-width: 100%;
 	height: auto;
+	display: block;
 }
 
 input,

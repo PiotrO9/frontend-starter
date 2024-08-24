@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import type baseButtonPropsModel from '../../types/prop-models/base/baseButtonPropsModel';
-import { baseButtonTypes } from '../../types/prop-models/enums/base-button-types';
-import { controlSizes } from '../../types/prop-models/enums/control-sizes';
+import { baseButtonTypes, controlSizes } from '../../types/prop-models/enums/base-button-types';
+
+interface baseButtonPropsModel {
+    label: string;
+    buttonType: baseButtonTypes;
+    size?: controlSizes;
+    isLoading?: boolean;
+    isDisable?: boolean;
+    onClickFunction?: Function;
+}
 
 const styles = computed(() => {
     const classNames: string[] = [];
@@ -29,7 +35,7 @@ const props = withDefaults(defineProps<baseButtonPropsModel>(), { isLoading: fal
     </button>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .button {
     font-family: var(--main-font);
     border-radius: var(--default-border-radius);
@@ -37,7 +43,7 @@ const props = withDefaults(defineProps<baseButtonPropsModel>(), { isLoading: fal
     width: max-content;
     height: max-content;
     word-break: break-word;
-    transition: background-color 0.3s, border 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, border 0.3s ease color 0.3s ease;
 
     &.primary {
         background-color: var(--const-primary);
