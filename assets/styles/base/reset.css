@@ -143,6 +143,7 @@ select {
 
 input {
 	caret-color: inherit;
+
 	&:focus {
 		outline: none;
 		border: none;

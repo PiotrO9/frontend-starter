@@ -1,7 +1,9 @@
-@import './abstracts/variables.css';
+/* stylelint-disable at-rule-empty-line-before */
+@import url('./abstracts/variables.css');
 
-@import './base/reset';
-@import './base/fonts';
-@import './base/base';
+@import url('./base/reset');
+@import url('./base/fonts');
+@import url('./base/base');
 
-@import './elements/button';
+@import url('./elements/button');
+/* stylelint-enable at-rule-empty-line-before */

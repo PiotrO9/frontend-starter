@@ -1,6 +1,5 @@
 export enum CountryCode {
-    US = 'US',
-    Canada = 'Canada',
-    Numeric = 'Numeric',
-    Poland = 'Poland'
+	US = 'US',
+	Numeric = 'Numeric',
+	Poland = 'Poland',
 }
