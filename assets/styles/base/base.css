@@ -7,6 +7,13 @@ body,
 	min-height: 100dvh;
 }
 
+html {
+	&.dark-mode {
+		background-color: var(--const-black);
+		color: var(--const-primary);
+	}
+}
+
 a {
 	color: var(--link-color);
 	cursor: pointer;

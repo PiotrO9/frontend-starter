@@ -19,6 +19,7 @@
 		"lint:js:fix": "eslint . --fix"
 	},
 	"dependencies": {
+		"@nuxtjs/color-mode": "^3.4.4",
 		"@storybook/preset-scss": "^1.0.3",
 		"date-fns": "^3.6.0",
 		"npm": "^10.6.0",
