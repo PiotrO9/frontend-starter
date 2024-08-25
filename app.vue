@@ -4,6 +4,7 @@ const defaultLayoutName = 'default';
 </script>
 
 <template>
+    <Notification />
     <NuxtLayout :name="defaultLayoutName">
         <NuxtPage />
     </NuxtLayout>

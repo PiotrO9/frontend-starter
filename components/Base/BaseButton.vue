@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { NotificationTypes } from '~/types/enums/notificationTypes';
 import { baseButtonTypes, controlSizes } from '../../types/prop-models/enums/base-button-types';
+import { useNotificationStore } from '~/stores/notificationStore';
 
 interface baseButtonPropsModel {
     label: string;
@@ -9,6 +11,8 @@ interface baseButtonPropsModel {
     isDisable?: boolean;
     onClickFunction?: Function;
 }
+
+const notificationStore = useNotificationStore();
 
 const styles = computed(() => {
     const classNames: string[] = [];
@@ -25,10 +29,18 @@ const styles = computed(() => {
 });
 
 const props = withDefaults(defineProps<baseButtonPropsModel>(), { isLoading: false, isDisable: false, size: controlSizes.small });
+
+function handleButtonClick() {
+    notificationStore.setNotification({
+        title: "Test notification",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut",
+        type: NotificationTypes.ALERT,
+    })
+}
 </script>
 
 <template>
-    <button class="button" :class="styles">
+    <button class="button" :class="styles" @click="handleButtonClick">
         <span class="text">
             {{ props.label }}
         </span>

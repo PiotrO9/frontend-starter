@@ -12,6 +12,7 @@
 	--const-green: #6dfd9c;
 
 	--const-alert-color: #d21b1b;
+	--const-warning-color: #eea11b;
 
 	--border-color: var(--const-gray-1);
 	--link-color: var(--const-primary);
@@ -21,6 +22,12 @@
 	--shadow-2: 2px 2px 8px rgba(0 0 0 0.15);
 
 	--default-border-radius: 12px;
+
+	--base-layer: 1;
+	--second-layer: 2;
+	--third-layer: 3;
+	--fixed-element-layer: 10;
+	--overlay-layer: 100;
 
 	/* stylelint-enable custom-property-empty-line-before */
 }
