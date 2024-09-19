@@ -57,7 +57,7 @@ const props = defineProps<baseInputPropsModel>();
         bottom: 13px;
         left: 15px;
         transition: transform 0.3s;
-        background-color: var(--const-white);
+        background-color: var(--background-color);
         padding: 2px 5px;
 
         &:has(+ input:focus) {
@@ -69,8 +69,8 @@ const props = defineProps<baseInputPropsModel>();
         height: 45px;
         margin-top: 20px;
         padding: 10px;
-        border: 2px solid var(--const-primary);
-        border-radius: var(--default-border-radius);
+        border: 2px solid var(--input-border);
+        border-radius: var(--border-radius);
     }
 }
 </style>

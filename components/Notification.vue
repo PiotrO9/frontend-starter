@@ -69,13 +69,13 @@ function handleCloseButtonClick(event: Event) {
 
 <style scoped>
 .notification-overlay {
-    background-color: var(--const-black);
+    background-color: var(--background-color-negative);
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     inset: 0;
-    z-index: var(--base-layer);
+    z-index: 1;
     cursor: pointer;
     opacity: 0.6;
 
@@ -83,8 +83,8 @@ function handleCloseButtonClick(event: Event) {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        background-color: var(--const-white);
-        border-radius: var(--default-border-radius);
+        background-color: var(--background-color);
+        border-radius: var(--border-radius);
         padding: 1rem;
         max-width: 60dvw;
         cursor: default;
@@ -98,19 +98,19 @@ function handleCloseButtonClick(event: Event) {
                 width: 20px;
 
                 &.correct {
-                    color: var(--const-green);
+                    color: var(--color-succes);
                 }
 
                 &.alert {
-                    color: var(--const-alert-color);
+                    color: var(--color-error);
                 }
 
                 &.warning {
-                    color: var(--const-warning-color);
+                    color: var(--color-warning);
                 }
 
                 &.information {
-                    color: var(--const-black);
+                    color: var(--text-color);
                 }
             }
         }
@@ -144,7 +144,7 @@ function handleCloseButtonClick(event: Event) {
                     .iconify {
                         height: 20px;
                         width: 20px;
-                        color: var(--const-black);
+                        color: var(--text-color);
                     }
                 }
             }

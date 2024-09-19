@@ -49,35 +49,34 @@ function handleButtonClick() {
 
 <style scoped>
 .button {
-    font-family: var(--main-font);
-    border-radius: var(--default-border-radius);
-    border: 2px solid var(--const-black);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--background-color-negative);
     width: max-content;
     height: max-content;
     word-break: break-word;
-    transition: background-color 0.3s ease, border 0.3s ease color 0.3s ease;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &.primary {
-        background-color: var(--const-primary);
-        border: 2px solid var(--const-primary);
-        color: var(--const-white);
+        background-color: var(--button-primary-background);
+        border: 2px solid var(--button-primary-border);
+        color: var(--button-primary-text);
 
         &:hover {
-            background-color: var(--const-white);
-            border: 2px solid var(--const-primary);
-            color: var(--const-primary);
+            background-color: var(--button-primary-background-hover);
+            border: 2px solid var(--button-primary-border-hover);
+            color: var(--button-primary-text-hover);
         }
     }
 
     &.secondary {
-        background-color: var(--const-white);
-        border: 2px solid var(--const-black);
-        color: var(--const-black);
+        background-color: var(--button-secondary-background);
+        border: 2px solid var(--button-secondary-border);
+        color: var(--button-secondary-text);
 
         &:hover {
-            background-color: var(--const-black);
-            border: 2px solid var(--const-white);
-            color: var(--const-white);
+            background-color: var(--button-secondary-background-hover);
+            border: 2px solid var(--button-secondary-border-hover);
+            color: var(--button-secondary-text-hover);
         }
     }
 

@@ -4,30 +4,44 @@
 	--main-font: 'Roboto', sans-serif;
 	--second-font: 'Merriweather', sans-serif;
 
-	--const-white: #fff;
-	--const-black: #000;
-	--const-primary: #6bcdfd;
-	--const-secondary: #f0f0f0;
-	--const-gray-1: #a3a3a3;
-	--const-green: #6dfd9c;
+	--color-primary: #6bcdfd;
+	--color-secondary: #f0f0f0;
+	--gray-300: #a3a3a3;
 
-	--const-alert-color: #d21b1b;
-	--const-warning-color: #eea11b;
+	--background-color: #fff;
+	--background-color-negative: #000;
 
-	--border-color: var(--const-gray-1);
-	--link-color: var(--const-primary);
-	--link-hover-color: #1261eb;
+	--color-succes: #11bc4a;
+	--color-error: #d21b1b;
+	--color-warning: #eea11b;
 
-	--shadow-1: 1px 1px 5px rgba(0 0 0 0.1);
-	--shadow-2: 2px 2px 8px rgba(0 0 0 0.15);
+	--text-color: #000;
+	--text-color-negative: #fff;
 
-	--default-border-radius: 12px;
+	--button-primary-text: var(--color-primary);
+	--button-primary-background: #fff;
+	--button-primary-border: var(--color-primary);
+	--button-primary-text-hover: #fff;
+	--button-primary-background-hover: var(--color-primary);
+	--button-primary-border-hover: var(--color-primary);
+	--button-secondary-text: #000;
+	--button-secondary-background: #fff;
+	--button-secondary-border: #000;
+	--button-secondary-text-hover: #fff;
+	--button-secondary-background-hover: #000;
+	--button-secondary-border-hover: #000;
 
-	--base-layer: 1;
-	--second-layer: 2;
-	--third-layer: 3;
-	--fixed-element-layer: 10;
-	--overlay-layer: 100;
+	--link-color: var(--color-primary);
+	--link-color-hover: #1261eb;
+
+	--input-border: var(--color-primary);
+
+	--border-radius: 12px;
+
+	/* 
+	*
+	*
+	*/
 
 	/* stylelint-enable custom-property-empty-line-before */
 }

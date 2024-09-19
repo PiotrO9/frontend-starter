@@ -9,8 +9,8 @@ body,
 
 html {
 	&.dark-mode {
-		background-color: var(--const-black);
-		color: var(--const-primary);
+		background-color: var(--background-color-negative);
+		color: var(--color-primary);
 	}
 }
 
@@ -20,7 +20,7 @@ a {
 	transition: color 0.3s ease;
 
 	&:hover {
-		color: var(--link-hover-color);
+		color: var(--link-color-hover);
 	}
 
 	&:visited {

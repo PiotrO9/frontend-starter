@@ -46,7 +46,7 @@ function updateSearchTerm(event: Event) {
     .search-box {
         width: 100%;
         padding: 8px;
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--gray-300);
     }
 
     .results {
@@ -57,17 +57,17 @@ function updateSearchTerm(event: Event) {
         .item {
             margin: 5px 0;
             padding: 2px 5px;
-            background-color: var(--const-secondary);
+            background-color: var(--color-secondary);
             cursor: pointer;
 
             &:hover {
-                background-color: var(--const-gray-1);
+                background-color: var(--gray-300);
             }
         }
     }
 
     .no-results {
-        color: var(--const-black);
+        color: var(--text-color);
         padding: 5px;
     }
 }
