@@ -52,13 +52,14 @@ const props = defineProps<baseInputPropsModel>();
     flex-direction: column;
     position: relative;
 
-    .label {
+    label {
         position: absolute;
         bottom: 13px;
         left: 15px;
         transition: transform 0.3s;
         background-color: var(--background-color);
         padding: 2px 5px;
+        font-size: 16rem;
 
         &:has(+ input:focus) {
             transform: translateY(-20px);

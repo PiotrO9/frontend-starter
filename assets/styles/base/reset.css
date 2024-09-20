@@ -2,6 +2,8 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body,
@@ -78,11 +80,7 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
 	border: 0;
-	font-size: inherit;
-	font-family: inherit;
 	vertical-align: baseline;
 }
 
@@ -100,9 +98,13 @@ section {
 	display: block;
 }
 
+html {
+	font-size: 6.25%;
+}
+
 body {
-	line-height: 1;
 	font-family: var(--main-font);
+	line-height: 1.2;
 }
 
 ol,
@@ -134,14 +136,6 @@ video {
 	display: block;
 }
 
-input,
-button,
-textarea,
-select {
-	font: inherit;
-	color: inherit;
-}
-
 input {
 	caret-color: inherit;
 
@@ -153,13 +147,11 @@ input {
 
 a {
 	text-decoration: none;
-	color: inherit;
 }
 
 button {
 	background: none;
 	border: none;
 	outline: none;
-	padding: 0;
 	cursor: pointer;
 }

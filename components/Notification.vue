@@ -149,10 +149,6 @@ function handleCloseButtonClick(event: Event) {
                 }
             }
         }
-
-        .notification-container-content {
-            .notification-description {}
-        }
     }
 }
 
