@@ -24,21 +24,19 @@ class ApiService {
 		url: string,
 		data?: any,
 		options: any = {},
-		lazy: boolean = false,
+		interceptor?: (config: any) => any,
 	): Promise<T> {
 		try {
-			const response: ApiResponse<T> = await this.api(url, {
-				method,
-				body: data,
-				lazy,
-				...options,
-			})
+			let config = { method, body: data, ...options }
+			if (interceptor) {
+				config = interceptor(config)
+			}
 
-			// Handle the API response according to your backend's standardized structure
+			const response: ApiResponse<T> = await this.api(url, config)
+
 			if (response.success) {
 				return response.data
 			} else {
-				// If the response indicates an error, throw an exception with the message
 				throw new Error(
 					response.message || 'An unknown error occurred.',
 				)
@@ -52,39 +50,50 @@ class ApiService {
 	async get<T>(
 		url: string,
 		options: any = {},
-		lazy: boolean = false,
+		interceptor?: (config: any) => any,
 	): Promise<T> {
-		return this.request<T>(HttpMethod.GET, url, undefined, options, lazy)
+		return this.request<T>(
+			HttpMethod.GET,
+			url,
+			undefined,
+			options,
+			interceptor,
+		)
 	}
 
 	async post<T>(
 		url: string,
 		data: any,
 		options: any = {},
-		lazy: boolean = false,
+		interceptor?: (config: any) => any,
 	): Promise<T> {
-		return this.request<T>(HttpMethod.POST, url, data, options, lazy)
+		return this.request<T>(HttpMethod.POST, url, data, options, interceptor)
 	}
 
 	async put<T>(
 		url: string,
 		data: any,
 		options: any = {},
-		lazy: boolean = false,
+		interceptor?: (config: any) => any,
 	): Promise<T> {
-		return this.request<T>(HttpMethod.PUT, url, data, options, lazy)
+		return this.request<T>(HttpMethod.PUT, url, data, options, interceptor)
 	}
 
 	async delete<T>(
 		url: string,
 		options: any = {},
-		lazy: boolean = false,
+		interceptor?: (config: any) => any,
 	): Promise<T> {
-		return this.request<T>(HttpMethod.DELETE, url, undefined, options, lazy)
+		return this.request<T>(
+			HttpMethod.DELETE,
+			url,
+			undefined,
+			options,
+			interceptor,
+		)
 	}
 
 	private handleError(error: any): void {
-		// Check for API response structure and handle accordingly
 		if (error?.data?.message) {
 			console.error('API Error Message:', error.data.message)
 		} else {

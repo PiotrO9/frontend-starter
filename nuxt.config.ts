@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ['./assets/styles/app.css'],
-	modules: ['@nuxt/eslint', '@nuxtjs/color-mode', "@nuxt/icon"],
+	modules: ['@nuxt/eslint', '@nuxtjs/color-mode', '@nuxt/icon'],
 	typescript: {
 		typeCheck: true,
 	},
