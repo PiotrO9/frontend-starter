@@ -1,5 +1,11 @@
-// services/apiService.ts
 import { HttpMethod } from '~/types/enums/httpMethodsTypes'
+
+interface ApiResponse<T> {
+	success: boolean
+	message: string
+	data: T
+	statusCode: number
+}
 
 class ApiService {
 	private api
@@ -21,14 +27,23 @@ class ApiService {
 		lazy: boolean = false,
 	): Promise<T> {
 		try {
-			const response = await this.api<T>(url, {
+			const response: ApiResponse<T> = await this.api(url, {
 				method,
 				body: data,
 				lazy,
 				...options,
 			})
-			return response
-		} catch (error) {
+
+			// Handle the API response according to your backend's standardized structure
+			if (response.success) {
+				return response.data
+			} else {
+				// If the response indicates an error, throw an exception with the message
+				throw new Error(
+					response.message || 'An unknown error occurred.',
+				)
+			}
+		} catch (error: any) {
 			this.handleError(error)
 			throw error
 		}
@@ -69,7 +84,12 @@ class ApiService {
 	}
 
 	private handleError(error: any): void {
-		console.error('API Error:', error)
+		// Check for API response structure and handle accordingly
+		if (error?.data?.message) {
+			console.error('API Error Message:', error.data.message)
+		} else {
+			console.error('API Error:', error)
+		}
 	}
 }
 
