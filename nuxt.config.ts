@@ -1,15 +1,18 @@
 export default defineNuxtConfig({
+	modules: ['@nuxt/eslint', '@nuxtjs/color-mode', '@nuxt/icon'],
+
+	plugins: ['~/plugins/pinia.js'],
 	devtools: { enabled: true },
 	css: ['./assets/styles/app.css'],
-	modules: ['@nuxt/eslint', '@nuxtjs/color-mode', '@nuxt/icon'],
+
 	typescript: {
 		typeCheck: true,
 	},
-	plugins: ['~/plugins/pinia.js'],
+
 	eslint: {
 		checker: true,
 		config: {
 			stylistic: true,
 		},
 	},
-})
+});

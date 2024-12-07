@@ -1,22 +1,37 @@
 <template>
-    <div class="search-input">
-        <input type="text" :value="searchTerm" :placeholder="props.placeholder" class="search-box"
-            @input="updateSearchTerm">
-        <ul v-if="searchTerm && filteredItems.length" class="results">
-            <li v-for="(item, index) in filteredItems" :key="index" class="item">
-                {{ item }}
-            </li>
-        </ul>
-        <p v-if="searchTerm && !filteredItems.length" class="no-results">
-            No items found.
-        </p>
-    </div>
+	<div class="search-input">
+		<input
+			type="text"
+			:value="searchTerm"
+			:placeholder="props.placeholder"
+			class="search-box"
+			@input="updateSearchTerm"
+		>
+		<ul
+			v-if="searchTerm && filteredItems.length"
+			class="results"
+		>
+			<li
+				v-for="(item, index) in filteredItems"
+				:key="index"
+				class="item"
+			>
+				{{ item }}
+			</li>
+		</ul>
+		<p
+			v-if="searchTerm && !filteredItems.length"
+			class="no-results"
+		>
+			No items found.
+		</p>
+	</div>
 </template>
 
 <script setup lang="ts">
 interface BaseSearchInputPropsMode {
-    placeholder: string;
-    name?: string;
+	placeholder: string;
+	name?: string;
 }
 
 const props = defineProps<BaseSearchInputPropsMode>();
@@ -26,15 +41,15 @@ const items = ref<string[]>(['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 
 const searchTerm = ref<string>('');
 
 const filteredItems = computed(() => {
-    return items.value.filter(item =>
-        item.toLowerCase().includes(searchTerm.value.toLowerCase())
-    );
+	return items.value.filter(item =>
+		item.toLowerCase().includes(searchTerm.value.toLowerCase()),
+	);
 });
 
 function updateSearchTerm(event: Event) {
-    const target = event.target as HTMLInputElement;
+	const target = event.target as HTMLInputElement;
 
-    searchTerm.value = target.value;
+	searchTerm.value = target.value;
 }
 </script>
 

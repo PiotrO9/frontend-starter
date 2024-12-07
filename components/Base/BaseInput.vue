@@ -1,47 +1,53 @@
 <script setup lang="ts">
-
 interface baseInputPropsModel {
-    label: string
-    type: InputType
-    name?: string
-    borderColor?: string
+	label: string;
+	type: InputType;
+	name?: string;
+	borderColor?: string;
 }
 
 type InputType =
-    | 'button'
-    | 'checkbox'
-    | 'color'
-    | 'date'
-    | 'datetime-local'
-    | 'email'
-    | 'file'
-    | 'hidden'
-    | 'image'
-    | 'month'
-    | 'number'
-    | 'password'
-    | 'radio'
-    | 'range'
-    | 'reset'
-    | 'search'
-    | 'submit'
-    | 'tel'
-    | 'text'
-    | 'time'
-    | 'url'
-    | 'week'
-
+	| 'button'
+	| 'checkbox'
+	| 'color'
+	| 'date'
+	| 'datetime-local'
+	| 'email'
+	| 'file'
+	| 'hidden'
+	| 'image'
+	| 'month'
+	| 'number'
+	| 'password'
+	| 'radio'
+	| 'range'
+	| 'reset'
+	| 'search'
+	| 'submit'
+	| 'tel'
+	| 'text'
+	| 'time'
+	| 'url'
+	| 'week';
 
 const props = defineProps<baseInputPropsModel>();
 </script>
 
 <template>
-    <div class="input-wrapper">
-        <label :for="props.name" class="label">
-            {{ props.label }}
-        </label>
-        <input :type="props.type" class="input" :name="props.name" :style="{ borderColor: props.borderColor }">
-    </div>
+	<div class="input-wrapper">
+		<label
+			:for="props.name"
+			class="label"
+		>
+			{{ props.label }}
+		</label>
+		<input
+			:type="props.type"
+			class="input"
+			:name="props.name"
+			:style="{ borderColor: props.borderColor }"
+		>
+	</div>
 </template>
 
 <style scoped>

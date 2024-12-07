@@ -9,62 +9,79 @@ const selectedIconClassName = ref('');
 const isNotificationVisible = computed(() => notificationStore.visibility);
 const notificationDescription = computed(() => notificationStore.description);
 const iconName = computed(() => {
-    if (notificationStore.icon) {
-        switch (notificationStore.icon) {
-            case NotificationTypes.CORRECT: {
-                selectedIconClassName.value = 'correct';
-                return 'pajamas:check-circle';
-            }
-            case NotificationTypes.ALERT: {
-                selectedIconClassName.value = 'alert';
-                return 'pajamas:abuse'
-            }
-            case NotificationTypes.WARNING: {
-                selectedIconClassName.value = 'warning';
-                return 'pajamas:abuse'
-            }
-        }
-    }
+	if (notificationStore.icon) {
+		switch (notificationStore.icon) {
+			case NotificationTypes.CORRECT: {
+				selectedIconClassName.value = 'correct';
+				return 'pajamas:check-circle';
+			}
+			case NotificationTypes.ALERT: {
+				selectedIconClassName.value = 'alert';
+				return 'pajamas:abuse';
+			}
+			case NotificationTypes.WARNING: {
+				selectedIconClassName.value = 'warning';
+				return 'pajamas:abuse';
+			}
+		}
+	}
 
-    selectedIconClassName.value = 'information';
-    return 'pajamas:information-o';
-})
+	selectedIconClassName.value = 'information';
+	return 'pajamas:information-o';
+});
 
 function handleCloseButtonClick(event: Event) {
-    event.stopPropagation();
-    notificationStore.clearNotification()
+	event.stopPropagation();
+	notificationStore.clearNotification();
 }
 </script>
 
 <template>
-    <Transition name="slide" appear>
-        <div v-if="isNotificationVisible" class="notification-overlay" @click="handleCloseButtonClick">
-            <Transition name="fade" appear>
-                <div class="notification-container">
-                    <div class="notification-container-header-wrapper">
-                        <div class="static-data-wrapper">
-                            <div class="notification-icon-wrapper">
-                                <Icon :name="iconName" class="selected-icon" :class="selectedIconClassName" />
-                            </div>
-                            <div class="notification-title-wrapper">
-                                <span class="notification-title">Notification title</span>
-                            </div>
-                        </div>
-                        <div class="notification-close-wrapper">
-                            <button class="notification-close-button" @click="handleCloseButtonClick">
-                                <Icon name="pajamas:close" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="notification-container-content">
-                        <span class="notification-description">
-                            {{ notificationDescription }}
-                        </span>
-                    </div>
-                </div>
-            </Transition>
-        </div>
-    </Transition>
+	<Transition
+		name="slide"
+		appear
+	>
+		<div
+			v-if="isNotificationVisible"
+			class="notification-overlay"
+			@click="handleCloseButtonClick"
+		>
+			<Transition
+				name="fade"
+				appear
+			>
+				<div class="notification-container">
+					<div class="notification-container-header-wrapper">
+						<div class="static-data-wrapper">
+							<div class="notification-icon-wrapper">
+								<Icon
+									:name="iconName"
+									class="selected-icon"
+									:class="selectedIconClassName"
+								/>
+							</div>
+							<div class="notification-title-wrapper">
+								<span class="notification-title">Notification title</span>
+							</div>
+						</div>
+						<div class="notification-close-wrapper">
+							<button
+								class="notification-close-button"
+								@click="handleCloseButtonClick"
+							>
+								<Icon name="pajamas:close" />
+							</button>
+						</div>
+					</div>
+					<div class="notification-container-content">
+						<span class="notification-description">
+							{{ notificationDescription }}
+						</span>
+					</div>
+				</div>
+			</Transition>
+		</div>
+	</Transition>
 </template>
 
 <style scoped>
