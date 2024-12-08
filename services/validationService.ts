@@ -1,6 +1,4 @@
-// services/validationService.ts
-
-import { CountryCode } from '~/types/enums/postal-code-patterns';
+import { CountryCode } from '../types/enums/postal-code-patterns';
 
 class ValidationService {
 	isValidEmail(email: string): boolean {
