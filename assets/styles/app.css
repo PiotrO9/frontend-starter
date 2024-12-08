@@ -1,4 +1,6 @@
 /* stylelint-disable at-rule-empty-line-before */
+@import url('./tailwind.css');
+
 @import url('./abstracts/variables.css');
 
 @import url('./base/reset.css');

@@ -30,8 +30,8 @@ export default createConfigForNuxt({
 			'@stylistic/operator-linebreak': 'off',
 			'@stylistic/brace-style': 'off',
 			'@stylistic/semi': 'error',
-			'@stylistic/indent': ['error', 'tab'],
 			'@stylistic/member-delimiter-style': 'error',
+			'@stylistic/indent': ['off', 'tab'],
 		},
 	})
 	.override('nuxt/vue/rules', {
