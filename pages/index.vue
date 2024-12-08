@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import { baseButtonTypes } from '~/types/prop-models/enums/base-button-types';
 
 definePageMeta({

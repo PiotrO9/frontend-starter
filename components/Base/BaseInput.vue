@@ -62,7 +62,7 @@ const props = defineProps<baseInputPropsModel>();
 		transition: transform 0.3s;
 		background-color: var(--background-color);
 		padding: 2px 5px;
-		font-size: 16rem;
+		font-size: 1rem;
 
 		&:has(+ input:focus) {
 			transform: translateY(-20px);

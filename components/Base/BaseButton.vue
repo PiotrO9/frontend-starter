@@ -95,7 +95,7 @@ function handleButtonClick() {
 		max-width: 320px;
 
 		.text {
-			font-size: 20px;
+			font-size: 1.25rem;
 		}
 	}
 
@@ -104,7 +104,7 @@ function handleButtonClick() {
 		max-width: 400px;
 
 		.text {
-			font-size: 24px;
+			font-size: 1.5rem;
 		}
 	}
 

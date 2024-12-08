@@ -32,6 +32,7 @@ export default createConfigForNuxt({
 			'@stylistic/semi': 'error',
 			'@stylistic/member-delimiter-style': 'error',
 			'@stylistic/indent': ['off', 'tab'],
+			'@stylistic/arrow-parens': 'off',
 		},
 	})
 	.override('nuxt/vue/rules', {
