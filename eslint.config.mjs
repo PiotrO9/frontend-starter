@@ -40,6 +40,7 @@ export default createConfigForNuxt({
 			'vue/multi-word-component-names': 'off',
 			'vue/no-side-effects-in-computed-properties': 'off',
 			'vue/no-v-html': 'off',
+			'vue/html-self-closing': 'off',
 			'vue/max-attributes-per-line': [
 				'error',
 				{
