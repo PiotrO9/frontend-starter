@@ -1,5 +1,10 @@
 export default defineNuxtConfig({
-	modules: ['@nuxt/eslint', '@nuxtjs/color-mode', '@nuxt/icon'],
+	modules: [
+		'@nuxt/eslint',
+		'@nuxtjs/color-mode',
+		'@nuxt/icon',
+		'@nuxtjs/tailwindcss',
+	],
 
 	plugins: ['~/plugins/pinia.js'],
 	devtools: { enabled: true },
